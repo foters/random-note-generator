@@ -1,3 +1,16 @@
+@import url('../style/variables.css');
+
 .generated-note-wrapper {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.generated-note-wrapper__circle {
+  align-items: center;
+  border: 2px solid var(--color3);
+  border-radius: 50%;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  width: 80px;
 }

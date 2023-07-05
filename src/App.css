@@ -11,6 +11,9 @@
 }
 
 .global-wrapper {
+  border: 2px solid var(--color3);
+  border-radius: 2rem 0.5rem;
   max-width: 500px;
   min-width: 300px;
+  padding: 3.5rem 1rem;
 }

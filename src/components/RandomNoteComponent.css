@@ -2,5 +2,6 @@
   width: 100%;
 }
 .random-note-wrapper__checkboxes {
-
+  display: flex;
+  justify-content: center;
 }
