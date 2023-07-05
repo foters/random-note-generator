@@ -9,177 +9,219 @@ const App = () => {
   const fullNotes = [
     {
       id: 0,
-      value: 'DO♭'
+      value: 'DO♭',
+      alteratedValues: 'SI♭ MI♭ LA♭ RE♭ SOL♭ DO♭ FA♭'
     },
     {
       id: 1,
-      value: 'DO'
+      value: 'DO',
+      alteratedValues: '/'
     },
     {
       id: 2,
-      value: 'DO#'
+      value: 'DO#',
+      alteratedValues: 'FA# DO# SOL# RE# LA# MI# SI#'
     },
     {
       id: 3,
-      value: 'RE♭'
+      value: 'RE♭',
+      alteratedValues: 'SI♭ MI♭ LA♭ RE♭ SOL♭'
     },
     {
       id: 4,
-      value: 'RE'
+      value: 'RE',
+      alteratedValues: 'FA# DO#'
     },
     {
       id: 5,
-      value: 'RE#'
+      value: 'RE#',
+      alteratedValues: 'FA## DO## SOL# RE# LA# MI# SI#'
     },
     {
       id: 6,
-      value: 'MI♭'
+      value: 'MI♭',
+      alteratedValues: 'SI♭ MI♭ LA♭'
     },
     {
       id: 7,
-      value: 'MI'
+      value: 'MI',
+      alteratedValues: 'FA# DO# SOL# RE#'
     },
     {
       id: 8,
-      value: 'MI#'
+      value: 'MI#',
+      alteratedValues: 'FA## DO## SOL## R#E# LA# MI# SI#'
     },
     {
       id: 9,
-      value: 'FA♭'
+      value: 'FA♭',
+      alteratedValues: 'SI♭♭ MI♭ LA♭ RE♭ SOL♭ DO♭ FA♭'
     },
     {
       id: 10,
-      value: 'FA'
+      value: 'FA',
+      alteratedValues: 'SI♭'
     },
     {
       id: 11,
-      value: 'FA#'
+      value: 'FA#',
+      alteratedValues: 'FA# DO# SOL# RE# LA# MI#'
     },
     {
       id: 12,
-      value: 'SOL♭'
+      value: 'SOL♭',
+      alteratedValues: 'SI♭ MI♭ LA♭ RE♭ SOL♭ DO♭'
     },
     {
       id: 13,
-      value: 'SOL'
+      value: 'SOL',
+      alteratedValues: 'FA#'
     },
     {
       id: 14,
-      value: 'SOL#'
+      value: 'SOL#',
+      alteratedValues: 'FA## DO# SOL# RE# LA# MI# SI#'
     },
     {
       id: 15,
-      value: 'LA♭'
+      value: 'LA♭',
+      alteratedValues: 'SI♭ MI♭ LA♭ RE♭'
     },
     {
       id: 16,
-      value: 'LA'
+      value: 'LA',
+      alteratedValues: 'FA# DO# SOL#'
     },
     {
       id: 17,
-      value: 'LA#'
+      value: 'LA#',
+      alteratedValues: 'FA## DO## SOL## RE# LA# MI# SI#'
     },
     {
       id: 18,
-      value: 'SI♭'
+      value: 'SI♭',
+      alteratedValues: 'SI♭ MI♭'
     },
     {
       id: 19,
-      value: 'SI'
+      value: 'SI',
+      alteratedValues: 'FA# DO# SOL# RE# LA#'
     },
     {
       id: 20,
-      value: 'SI#'
+      value: 'SI#',
+      alteratedValues: 'FA## DO## SOL## RE## LA## MI# SI#'
     },
   ];
 
   const naturalNotes = [
     {
       id: 0,
-      value: 'DO'
+      value: 'DO',
+      alteratedValues: '/',
     },
     {
       id: 1,
-      value: 'RE'
+      value: 'RE',
+      alteratedValues: 'FA# DO#'
     },
     {
       id: 2,
-      value: 'MI'
+      value: 'MI',
+      alteratedValues: 'FA# DO# SOL# RE#'
     },
     {
       id: 3,
-      value: 'FA'
+      value: 'FA',
+      alteratedValues: 'SI♭'
     },
     {
       id: 4,
-      value: 'SOL'
+      value: 'SOL',
+      alteratedValues: 'FA#'
     },
     {
       id: 5,
-      value: 'LA'
+      value: 'LA',
+      alteratedValues: 'FA# DO# SOL#'
     },
     {
       id: 6,
-      value: 'SI'
+      value: 'SI',
+      alteratedValues: 'FA# DO# SOL# RE# LA#'
     },
   ];
 
   const noBemolleNotes = [
     {
       id: 0,
-      value: 'DO'
+      value: 'DO',
+      alteratedValues: '/'
     },
     {
       id: 1,
-      value: 'DO#'
+      value: 'DO#',
+      alteratedValues: 'FA# DO# SOL# RE# LA# MI# SI#'
     },
     {
       id: 2,
-      value: 'RE'
+      value: 'RE',
+      alteratedValues: 'FA# DO#'
     },
     {
       id: 3,
-      value: 'RE#'
+      value: 'RE#',
+      alteratedValues: 'FA## DO## SOL# RE# LA# MI# SI#'
     },
     {
       id: 4,
-      value: 'MI'
+      value: 'MI',
+      alteratedValues: 'FA# DO# SOL# RE#'
     },
     {
       id: 5,
-      value: 'MI#'
+      value: 'MI#',
+      alteratedValues: 'FA## DO## SOL## R#E# LA# MI# SI#'
     },
     {
       id: 6,
-      value: 'FA'
+      value: 'FA',
+      alteratedValues: 'SI♭'
     },
     {
       id: 7,
-      value: 'FA#'
+      value: 'FA#',
+      alteratedValues: 'FA# DO# SOL# RE# LA# MI#'
     },
     {
       id: 8,
-      value: 'SOL'
+      value: 'SOL',
+      alteratedValues: 'FA#'
     },
     {
       id: 9,
-      value: 'SOL#'
+      value: 'SOL#',
+      alteratedValues: 'FA## DO# SOL# RE# LA# MI#'
     },
     {
       id: 10,
-      value: 'LA'
+      value: 'LA',
+      alteratedValues: 'FA# DO# SOL#'
     },
     {
       id: 11,
-      value: 'LA#'
+      value: 'LA#',
+      alteratedValues: 'FA## DO## SOL## RE# LA# MI#'
     },
     {
       id: 12,
-      value: 'SI'
+      value: 'SI',
+      alteratedValues: 'FA# DO# SOL# RE# LA#'
     },
     {
       id: 13,
-      value: 'SI#'
+      value: 'SI#',
+      alteratedValues: 'FA## DO## SOL## RE## LA## MI# SI#'
     },
   ];
 
@@ -190,55 +232,68 @@ const App = () => {
     },
     {
       id: 1,
-      value: 'DO'
+      value: 'DO',
+      alteratedValues: '/'
     },
     {
       id: 3,
-      value: 'RE♭'
+      value: 'RE♭',
+      alteratedValues: 'SI♭ MI♭ LA♭ RE♭ SOL♭'
     },
     {
       id: 4,
-      value: 'RE'
+      value: 'RE',
+      alteratedValues: 'FA# DO#'
     },
     {
       id: 6,
-      value: 'MI♭'
+      value: 'MI♭',
+      alteratedValues: 'SI♭ MI♭ LA♭'
     },
     {
       id: 7,
-      value: 'MI'
+      value: 'MI',
+      alteratedValues: 'FA# DO# SOL# RE#'
     },
     {
       id: 9,
-      value: 'FA♭'
+      value: 'FA♭',
+      alteratedValues: 'SI♭♭ MI♭ LA♭ RE♭ SOL♭ DO♭ FA♭'
     },
     {
       id: 10,
-      value: 'FA'
+      value: 'FA',
+      alteratedValues: 'SI♭'
     },
     {
       id: 12,
-      value: 'SOL♭'
+      value: 'SOL♭',
+      alteratedValues: 'SI♭ MI♭ LA♭ RE♭ SOL♭ DO♭'
     },
     {
       id: 13,
-      value: 'SOL'
+      value: 'SOL',
+      alteratedValues: 'FA#'
     },
     {
       id: 15,
-      value: 'LA♭'
+      value: 'LA♭',
+      alteratedValues: 'SI♭ MI♭ LA♭ RE♭'
     },
     {
       id: 16,
-      value: 'LA'
+      value: 'LA',
+      alteratedValues: 'FA# DO# SOL#'
     },
     {
       id: 18,
-      value: 'SI♭'
+      value: 'SI♭',
+      alteratedValues: 'SI♭ MI♭'
     },
     {
       id: 19,
-      value: 'SI'
+      value: 'SI',
+      alteratedValues: 'FA# DO# SOL# RE# LA#'
     },
   ];
 
@@ -247,9 +302,11 @@ const App = () => {
   const [note, setNote] = useState(landingNote);
   const [bemolleEnabled, setBemolleEnabled] = useState(false);
   const [diesisEnabled, setDiesisEnabled] = useState(false);
+  const [scaleEnabled, setScaleEnabled] = useState(false);
 
   const toggleBemolleHandler = e => setBemolleEnabled(e);
   const toggleDiesisHandler = e => setDiesisEnabled(e);
+  const toggleScaleHandler = e => setScaleEnabled(e);
 
   const generatedNoteHandler = e => {
     let newNotes = [...naturalNotes];
@@ -271,8 +328,13 @@ const App = () => {
       <div className="global-wrapper">
         <HeaderComponent/>
         <main>
-          <RandomNoteComponent notes={naturalNotes} onGeneratedNote={generatedNoteHandler} onToggleDiesis={toggleDiesisHandler} onToggleBemolle={toggleBemolleHandler}/>
-          <GeneratedNoteComponent note={note}/>
+          <RandomNoteComponent 
+            notes={naturalNotes} 
+            onGeneratedNote={generatedNoteHandler}
+            onToggleScale={toggleScaleHandler}
+            onToggleDiesis={toggleDiesisHandler}
+            onToggleBemolle={toggleBemolleHandler}/>
+          <GeneratedNoteComponent note={note} showScale={scaleEnabled}/>
         </main>
       </div>
     </div>

@@ -1,7 +1,9 @@
 @import url('../style/variables.css');
 
 .generated-note-wrapper {
+  align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -13,4 +15,9 @@
   height: 80px;
   justify-content: center;
   width: 80px;
+}
+
+.generated-note-wrapper__alterations {
+  margin: 0.5rem 0 0;
+  height: 20px;
 }

@@ -5,3 +5,8 @@
   display: flex;
   justify-content: center;
 }
+
+.random-note-wrapper__checkboxes-element {
+  display: flex;
+  margin-right: 0.5rem;
+}
