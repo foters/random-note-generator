@@ -228,7 +228,8 @@ const App = () => {
   const noDiesisNotes = [
     {
       id: 0,
-      value: 'DO♭'
+      value: 'DO♭',
+      alteratedValues: 'SI♭ MI♭ LA♭ RE♭ SOL♭ DO♭ FA♭'
     },
     {
       id: 1,
@@ -236,62 +237,62 @@ const App = () => {
       alteratedValues: '/'
     },
     {
-      id: 3,
+      id: 2,
       value: 'RE♭',
       alteratedValues: 'SI♭ MI♭ LA♭ RE♭ SOL♭'
     },
     {
-      id: 4,
+      id: 3,
       value: 'RE',
       alteratedValues: 'FA# DO#'
     },
     {
-      id: 6,
+      id: 4,
       value: 'MI♭',
       alteratedValues: 'SI♭ MI♭ LA♭'
     },
     {
-      id: 7,
+      id: 5,
       value: 'MI',
       alteratedValues: 'FA# DO# SOL# RE#'
     },
     {
-      id: 9,
+      id: 6,
       value: 'FA♭',
       alteratedValues: 'SI♭♭ MI♭ LA♭ RE♭ SOL♭ DO♭ FA♭'
     },
     {
-      id: 10,
+      id: 7,
       value: 'FA',
       alteratedValues: 'SI♭'
     },
     {
-      id: 12,
+      id: 8,
       value: 'SOL♭',
       alteratedValues: 'SI♭ MI♭ LA♭ RE♭ SOL♭ DO♭'
     },
     {
-      id: 13,
+      id: 9,
       value: 'SOL',
       alteratedValues: 'FA#'
     },
     {
-      id: 15,
+      id: 10,
       value: 'LA♭',
       alteratedValues: 'SI♭ MI♭ LA♭ RE♭'
     },
     {
-      id: 16,
+      id: 11,
       value: 'LA',
       alteratedValues: 'FA# DO# SOL#'
     },
     {
-      id: 18,
+      id: 12,
       value: 'SI♭',
       alteratedValues: 'SI♭ MI♭'
     },
     {
-      id: 19,
+      id: 13,
       value: 'SI',
       alteratedValues: 'FA# DO# SOL# RE# LA#'
     },
@@ -306,7 +307,7 @@ const App = () => {
 
   const toggleBemolleHandler = e => setBemolleEnabled(e);
   const toggleDiesisHandler = e => setDiesisEnabled(e);
-  const toggleScaleHandler = e => setScaleEnabled(e);
+  const toggleAlteractionHandler = e => setScaleEnabled(e);
 
   const generatedNoteHandler = e => {
     let newNotes = [...naturalNotes];
@@ -319,9 +320,13 @@ const App = () => {
     if(diesisEnabled && bemolleEnabled) {
       newNotes = [...fullNotes];
     }
+
+    console.log('newNotes ', newNotes);
+    console.log('e ', e);
+    console.log('newNotes[e] ', newNotes[e]);
+
     setNote(newNotes[e]);
   };
-
 
   return (
     <div className="App">
@@ -331,7 +336,7 @@ const App = () => {
           <RandomNoteComponent 
             notes={naturalNotes} 
             onGeneratedNote={generatedNoteHandler}
-            onToggleScale={toggleScaleHandler}
+            onToggleAlteraction={toggleAlteractionHandler}
             onToggleDiesis={toggleDiesisHandler}
             onToggleBemolle={toggleBemolleHandler}/>
           <GeneratedNoteComponent note={note} showScale={scaleEnabled}/>

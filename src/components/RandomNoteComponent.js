@@ -7,8 +7,11 @@ const RandomNoteComponent = (props) => {
   const [bemolleFlag, setBemolleFlag] = useState(false);
   const generateNote = () => {
     let num = 7;
-    if((diesisFlag && !bemolleFlag) || (!diesisFlag && bemolleFlag)) {
+    if(diesisFlag || bemolleFlag) {
       num = 14;
+    }
+    if(diesisFlag && bemolleFlag) {
+      num = 21;
     }
     props.onGeneratedNote(parseInt(Math.random() * num));
     props.onToggleDiesis(diesisFlag);
@@ -25,17 +28,10 @@ const RandomNoteComponent = (props) => {
     setBemolleFlag(checked);
     props.onToggleBemolle(checked);
   }
-  const toggleScale = e => {
+  const toggleAlteraction = e => {
     const checked = e.target.checked;
-    setBemolleFlag(checked);
-    props.onToggleScale(checked);
+    props.onToggleAlteraction(checked);
   }
-
-
-  // const test = () => {
-  //   DO 1  DO# 2  REb 3  RE 4  RE# 5  MIb 6  MI 7  MI# 8  FAb 9  FA 10  FA# 11  SOLb 12  SOL 13  SOL# 14  LAb 15  LA 16  LA# 17  SIb 18  SI 19  SI# 20  DOb 21
-  // }
-     
 
   return (
     <div className="random-note-wrapper">
@@ -50,8 +46,8 @@ const RandomNoteComponent = (props) => {
           <label htmlFor='toggleBemolle'>♭</label>
         </div>
         <div className="random-note-wrapper__checkboxes-element">
-          <input type='checkbox' id="toggleScale" onChange={toggleScale}/>
-          <label htmlFor='toggleScale'>Alterations</label>
+          <input type='checkbox' id="toggleAlteraction" onChange={toggleAlteraction}/>
+          <label htmlFor='toggleAlteraction'>Alterations</label>
         </div>
       </div>
 
