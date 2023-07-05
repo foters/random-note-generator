@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import HeaderComponent from './components/HeaderComponent';
+import RandomNoteComponent from './components/RandomNoteComponent';
+import ButtonComponent from './components/ButtonComponent';
+import { useState } from 'react';
 
-function App() {
+const App = () => {
+  
+  const [note, setNote] = useState(0);
+  const [isDisabledButton, setIsDisabledButton] = useState(false);
+  
+  const generatedNoteHandler = (e) => setNote(e);
+
+  const onAlterationClickHandler = (e) => setIsDisabledButton(e);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HeaderComponent/>
+      <main>
+        <RandomNoteComponent note={note} onAlterationClick={onAlterationClickHandler}/>
+        <ButtonComponent onGeneratedNote={generatedNoteHandler} isButtonDisabled={isDisabledButton}/>
+      </main>
     </div>
   );
 }
