@@ -1,7 +1,9 @@
+import './HeaderComponent.css';
+
 const HeaderComponent = () => {
   return (
     <header>
-      header
+      Generate the note to start with
     </header>
   )
 }
