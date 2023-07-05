@@ -321,10 +321,6 @@ const App = () => {
       newNotes = [...fullNotes];
     }
 
-    console.log('newNotes ', newNotes);
-    console.log('e ', e);
-    console.log('newNotes[e] ', newNotes[e]);
-
     setNote(newNotes[e]);
   };
 
