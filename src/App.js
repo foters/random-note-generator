@@ -5,7 +5,7 @@ import RandomNoteComponent from './components/RandomNoteComponent';
 import { useState } from 'react';
 
 const App = () => {
-
+  
   const fullNotes = [
     {
       id: 0,
@@ -298,18 +298,41 @@ const App = () => {
     },
   ];
 
+  // TODO: check how to manage aleration with new "scale type" feature
+  const scales = [
+    {
+      id: 0,
+      name: 'Maggiore'
+    },
+    {
+      id: 1,
+      name: 'Minore naturale'
+    },
+    {
+      id: 2,
+      name: 'Minore armonica'
+    },
+    {
+      id: 3,
+      name: 'Minore melodica'
+    },
+  ]
+
   const landingNote = naturalNotes[parseInt(Math.random() * 7)]
 
   const [note, setNote] = useState(landingNote);
   const [bemolleEnabled, setBemolleEnabled] = useState(false);
   const [diesisEnabled, setDiesisEnabled] = useState(false);
-  const [scaleEnabled, setScaleEnabled] = useState(false);
+  const [alteractionEnabled, setAlteractionEnabled] = useState(false);
+  const [scaleTypeEnabled, setScaleTypeEnabled] = useState(false);
+  const [scaleType, setScaleType] = useState(scales[Math.floor(Math.random() * 4)])
 
   const toggleBemolleHandler = e => setBemolleEnabled(e);
   const toggleDiesisHandler = e => setDiesisEnabled(e);
-  const toggleAlteractionHandler = e => setScaleEnabled(e);
+  const toggleAlteractionHandler = e => setAlteractionEnabled(e);
+  const toggleScaleTypeHandler = e => setScaleTypeEnabled(e)
 
-  const generatedNoteHandler = e => {
+  const generatedNoteHandler = (note, scaleIndex) => {
     let newNotes = [...naturalNotes];
     if(diesisEnabled && !bemolleEnabled) {
       newNotes = [...noBemolleNotes];
@@ -320,8 +343,8 @@ const App = () => {
     if(diesisEnabled && bemolleEnabled) {
       newNotes = [...fullNotes];
     }
-
-    setNote(newNotes[e]);
+    setScaleType(scales[scaleIndex])
+    setNote(newNotes[note]);
   };
 
   return (
@@ -331,11 +354,14 @@ const App = () => {
         <main>
           <RandomNoteComponent 
             notes={naturalNotes} 
+            scales={scales}
             onGeneratedNote={generatedNoteHandler}
+            onToggleScaleType={toggleScaleTypeHandler}
             onToggleAlteraction={toggleAlteractionHandler}
             onToggleDiesis={toggleDiesisHandler}
-            onToggleBemolle={toggleBemolleHandler}/>
-          <GeneratedNoteComponent note={note} showScale={scaleEnabled}/>
+            onToggleBemolle={toggleBemolleHandler}
+          />
+          <GeneratedNoteComponent note={note} showScale={alteractionEnabled} showScaleType={scaleTypeEnabled} scaleType={scaleType} />
         </main>
       </div>
     </div>

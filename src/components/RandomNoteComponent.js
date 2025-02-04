@@ -13,7 +13,8 @@ const RandomNoteComponent = (props) => {
     if(diesisFlag && bemolleFlag) {
       num = 21;
     }
-    props.onGeneratedNote(parseInt(Math.random() * num));
+    const scaleIndex = parseInt(Math.random() * props.scales.length);
+    props.onGeneratedNote(parseInt(Math.random() * num), scaleIndex);
     props.onToggleDiesis(diesisFlag);
   };
 
@@ -28,9 +29,15 @@ const RandomNoteComponent = (props) => {
     setBemolleFlag(checked);
     props.onToggleBemolle(checked);
   }
-  const toggleAlteraction = e => {
+
+  // alteraction removed since with scale feature every single scale should have specific alterations
+  // const toggleAlteraction = e => {
+  //   const checked = e.target.checked;
+  //   props.onToggleAlteraction(checked);
+  // }
+  const toggleScale = e => {
     const checked = e.target.checked;
-    props.onToggleAlteraction(checked);
+    props.onToggleScaleType(checked);
   }
 
   return (
@@ -45,9 +52,13 @@ const RandomNoteComponent = (props) => {
           <input type='checkbox' id="toggleBemolle" onChange={toggleBemolle}/>
           <label htmlFor='toggleBemolle'>♭</label>
         </div>
-        <div className="random-note-wrapper__checkboxes-element">
+        {/* <div className="random-note-wrapper__checkboxes-element">
           <input type='checkbox' id="toggleAlteraction" onChange={toggleAlteraction}/>
           <label htmlFor='toggleAlteraction'>Alterations</label>
+        </div> */}
+        <div className="random-note-wrapper__checkboxes-element">
+          <input type='checkbox' id="toggleScale" onChange={toggleScale}/>
+          <label htmlFor='toggleScale'>Scale type</label>
         </div>
       </div>
 

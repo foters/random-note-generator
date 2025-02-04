@@ -17,7 +17,13 @@
   width: 80px;
 }
 
-.generated-note-wrapper__alterations {
+.generated-note-wrapper__alterations p {
   margin: 0.5rem 0 0;
   height: 20px;
+}
+
+.generated-note-wrapper__scale-type p {
+  padding: 0.5rem 0.75rem 0;
+  font-weight: 450;
+  margin-bottom: 0;
 }
