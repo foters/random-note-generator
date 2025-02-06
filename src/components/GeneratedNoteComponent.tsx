@@ -1,11 +1,13 @@
 import React from 'react';
 import './GeneratedNoteComponent.css';
 import { GeneratedNoteProps } from '../types';
+import { useTranslation } from 'react-i18next';
 
 
 const GeneratedNoteComponent = (props: GeneratedNoteProps) => {
   const alterations = props.note.scales.filter(s => s.key === props.scaleType.key)?.[0]?.value;
-  
+  const { t } = useTranslation();
+
   return (
     <div className="generated-note-wrapper">
 
@@ -19,7 +21,7 @@ const GeneratedNoteComponent = (props: GeneratedNoteProps) => {
       </div>
       <div className="generated-note-wrapper__scale-type">
         {props.showScaleType && props.scaleType && (
-          <p>Scala {props.scaleType.name}</p>
+          <p>{t('scaleResult', {scaleName: props.scaleType.name})}</p>
         )}
       </div>
     </div>

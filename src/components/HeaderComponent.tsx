@@ -1,10 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import './HeaderComponent.css';
 import React from 'react';
 
 const HeaderComponent = () => {
+    const { t } = useTranslation();
   return (
     <header>
-      Generate the note to start with
+      <p>{t('headerMessage')}</p>
     </header>
   )
 }

@@ -5,8 +5,18 @@ import HeaderComponent from './components/HeaderComponent';
 import { useState } from 'react';
 import { Note, ScaleType } from './types';
 import RandomNoteComponent from './components/RandomNoteComponent';
+import './i18n';
+import { useTranslation } from 'react-i18next';
+
+const lngs: any = {
+  en: { nativeName: 'English', key: 'en' },
+  it: { nativeName: 'Italian', key: 'it' }
+};
+
 
 const App = () => {
+
+  const {t, i18n} = useTranslation()
   
   const fullNotes: Note[] = [
     {
@@ -774,14 +784,16 @@ const App = () => {
     },
   ]
 
-  const landingNote: Note = naturalNotes[Math.floor(Math.random() * 7)]
+  const landingNote: Note = naturalNotes[Math.floor(Math.random() * 7)];
+
+  const [lang, setLang] = useState();
 
   const [note, setNote] = useState(landingNote);
   const [bemolleEnabled, setBemolleEnabled] = useState(false);
   const [diesisEnabled, setDiesisEnabled] = useState(false);
   const [alteractionEnabled, setAlteractionEnabled] = useState(false);
   const [scaleTypeEnabled, setScaleTypeEnabled] = useState(false);
-  const [scaleType, setScaleType] = useState(scales[Math.floor(Math.random() * 4)])
+  const [scaleType, setScaleType] = useState(scales[Math.floor(Math.random() * 4)]);
 
   const toggleBemolleHandler = (e: any) => setBemolleEnabled(e);
   const toggleDiesisHandler = (e: any) => setDiesisEnabled(e);
@@ -805,6 +817,13 @@ const App = () => {
 
   return (
     <div className="App">
+      <div className='switch-buttons'>
+        {Object.keys(lngs).map((lng) => (
+          <button key={lng} className={i18n.resolvedLanguage === lng ? 'selected' : 'unselected'} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+            {t('changeCountry', {country: lngs[lng].key})}
+          </button>
+        ))}
+      </div>
       <div className="global-wrapper">
         <HeaderComponent/>
         <main>

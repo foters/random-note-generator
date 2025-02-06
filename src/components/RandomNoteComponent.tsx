@@ -2,8 +2,11 @@ import { useState } from "react";
 import './RandomNoteComponent.css';
 import ButtonComponent from "./Form/ButtonComponent";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const RandomNoteComponent = (props: any) => {
+  const {t} = useTranslation();
+
   const [diesisFlag, setDiesisFlag] = useState(false);
   const [bemolleFlag, setBemolleFlag] = useState(false);
   const generateNote = () => {
@@ -54,11 +57,11 @@ const RandomNoteComponent = (props: any) => {
         </div>
         <div className="random-note-wrapper__checkboxes-element">
           <input type='checkbox' id="toggleAlteraction" onChange={toggleAlteraction}/>
-          <label htmlFor='toggleAlteraction'>Alterations</label>
+          <label htmlFor='toggleAlteraction'>{t('alterations')}</label>
         </div>
         <div className="random-note-wrapper__checkboxes-element">
           <input type='checkbox' id="toggleScale" onChange={toggleScale}/>
-          <label htmlFor='toggleScale'>Scale type</label>
+          <label htmlFor='toggleScale'>{ t('scaleType')}</label>
         </div>
       </div>
 
