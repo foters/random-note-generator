@@ -1,12 +1,14 @@
+import React from 'react';
 import './App.css';
 import GeneratedNoteComponent from './components/GeneratedNoteComponent';
 import HeaderComponent from './components/HeaderComponent';
-import RandomNoteComponent from './components/RandomNoteComponent';
 import { useState } from 'react';
+import { Note, ScaleType } from './types';
+import RandomNoteComponent from './components/RandomNoteComponent';
 
 const App = () => {
   
-  const fullNotes = [
+  const fullNotes: Note[] = [
     {
       id: 0,
       type: 'bemolle',
@@ -745,11 +747,11 @@ const App = () => {
     },
   ];
 
-  const naturalNotes = [...fullNotes.filter(n => n.type === 'natural')];
+  const naturalNotes: Note[] = [...fullNotes.filter(n => n.type === 'natural')];
   const noBemolleNotes = [...fullNotes.filter(n => n.type !== 'bemolle')];
   const noDiesisNotes = [...fullNotes.filter(n => n.type !== 'diesis')]
 
-  const scales = [
+  const scales: ScaleType[] = [
     {
       id: 0,
       name: 'Maggiore',
@@ -772,7 +774,7 @@ const App = () => {
     },
   ]
 
-  const landingNote = naturalNotes[parseInt(Math.random() * 7)]
+  const landingNote: Note = naturalNotes[Math.floor(Math.random() * 7)]
 
   const [note, setNote] = useState(landingNote);
   const [bemolleEnabled, setBemolleEnabled] = useState(false);
@@ -781,12 +783,12 @@ const App = () => {
   const [scaleTypeEnabled, setScaleTypeEnabled] = useState(false);
   const [scaleType, setScaleType] = useState(scales[Math.floor(Math.random() * 4)])
 
-  const toggleBemolleHandler = e => setBemolleEnabled(e);
-  const toggleDiesisHandler = e => setDiesisEnabled(e);
-  const toggleAlteractionHandler = e => setAlteractionEnabled(e);
-  const toggleScaleTypeHandler = e => setScaleTypeEnabled(e);
+  const toggleBemolleHandler = (e: any) => setBemolleEnabled(e);
+  const toggleDiesisHandler = (e: any) => setDiesisEnabled(e);
+  const toggleAlteractionHandler = (e: any) => setAlteractionEnabled(e);
+  const toggleScaleTypeHandler = (e: any) => setScaleTypeEnabled(e);
 
-  const generatedNoteHandler = (note, scaleIndex) => {
+  const generatedNoteHandler = (note:any , scaleIndex: any) => {
     let newNotes = [...naturalNotes];
     if(diesisEnabled && !bemolleEnabled) {
       newNotes = [...noBemolleNotes];
@@ -806,7 +808,7 @@ const App = () => {
       <div className="global-wrapper">
         <HeaderComponent/>
         <main>
-          <RandomNoteComponent 
+          <RandomNoteComponent
             notes={naturalNotes} 
             scales={scales}
             onGeneratedNote={generatedNoteHandler}
