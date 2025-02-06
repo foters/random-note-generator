@@ -1,6 +1,9 @@
+import React from 'react';
 import './GeneratedNoteComponent.css';
+import { GeneratedNoteProps } from '../types';
 
-const GeneratedNoteComponent = props => {
+
+const GeneratedNoteComponent = (props: GeneratedNoteProps) => {
   const alterations = props.note.scales.filter(s => s.key === props.scaleType.key)?.[0]?.value;
   
   return (

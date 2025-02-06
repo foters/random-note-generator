@@ -1,8 +1,9 @@
 import { useState } from "react";
-import ButtonComponent from "./Form/ButtonComponent";
 import './RandomNoteComponent.css';
+import ButtonComponent from "./Form/ButtonComponent";
+import React from "react";
 
-const RandomNoteComponent = (props) => {
+const RandomNoteComponent = (props: any) => {
   const [diesisFlag, setDiesisFlag] = useState(false);
   const [bemolleFlag, setBemolleFlag] = useState(false);
   const generateNote = () => {
@@ -13,28 +14,28 @@ const RandomNoteComponent = (props) => {
     if(diesisFlag && bemolleFlag) {
       num = 21;
     }
-    const scaleIndex = parseInt(Math.random() * props.scales.length);
-    props.onGeneratedNote(parseInt(Math.random() * num), scaleIndex);
+    const scaleIndex = Math.floor(Math.random() * props.scales.length);
+    props.onGeneratedNote(Math.floor(Math.random() * num), scaleIndex);
     props.onToggleDiesis(diesisFlag);
   };
 
-  const toggleDiesis = e => {
+  const toggleDiesis = (e: any) => {
     const checked = e.target.checked;
     setDiesisFlag(checked);
     props.onToggleDiesis(checked);
   }
   
-  const toggleBemolle = e => {
+  const toggleBemolle = (e: any) => {
     const checked = e.target.checked;
     setBemolleFlag(checked);
     props.onToggleBemolle(checked);
   }
 
-  const toggleAlteraction = e => {
+  const toggleAlteraction = (e: any) => {
     const checked = e.target.checked;
     props.onToggleAlteraction(checked);
   }
-  const toggleScale = e => {
+  const toggleScale = (e: any) => {
     const checked = e.target.checked;
     props.onToggleScaleType(checked);
   }
