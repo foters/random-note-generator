@@ -786,8 +786,6 @@ const App = () => {
 
   const landingNote: Note = naturalNotes[Math.floor(Math.random() * 7)];
 
-  const [lang, setLang] = useState();
-
   const [note, setNote] = useState(landingNote);
   const [bemolleEnabled, setBemolleEnabled] = useState(false);
   const [diesisEnabled, setDiesisEnabled] = useState(false);
