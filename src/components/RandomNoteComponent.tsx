@@ -49,15 +49,21 @@ const RandomNoteComponent = (props: any) => {
       <div className="random-note-wrapper__checkboxes">
         <div className="random-note-wrapper__checkboxes-element">
           <input type='checkbox' id="toggleDiesis" onChange={toggleDiesis}/>
-          <label htmlFor='toggleDiesis'>#</label>
+          <label htmlFor='toggleDiesis'>Diesis #</label>
+        </div>
+        <div className="random-note-wrapper__checkboxes-element">
+          <input type='checkbox' id="toggleAlteraction" onChange={toggleAlteraction} />
+          {/* TODO: aggiungere tooltip per indicare che queste alterazioni sono riferite alla scala */}
+          <label htmlFor='toggleAlteraction'>
+            {t('alterations')}
+            <span className="info-icon">
+              {/* <img src="../icons/info.png" alt="" /> */}
+            </span>
+          </label>
         </div>
         <div className="random-note-wrapper__checkboxes-element">
           <input type='checkbox' id="toggleBemolle" onChange={toggleBemolle}/>
-          <label htmlFor='toggleBemolle'>♭</label>
-        </div>
-        <div className="random-note-wrapper__checkboxes-element">
-          <input type='checkbox' id="toggleAlteraction" onChange={toggleAlteraction}/>
-          <label htmlFor='toggleAlteraction'>{t('alterations')}</label>
+          <label htmlFor='toggleBemolle'>Bemolle ♭</label>
         </div>
         <div className="random-note-wrapper__checkboxes-element">
           <input type='checkbox' id="toggleScale" onChange={toggleScale}/>

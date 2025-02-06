@@ -1,6 +1,6 @@
 @import url('../style/variables.css');
 header {
-  padding: 0 0 3rem;
+  padding: 0 0 2rem;
   display: flex;
   justify-content: center;
 }

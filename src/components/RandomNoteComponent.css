@@ -2,11 +2,29 @@
   width: 100%;
 }
 .random-note-wrapper__checkboxes {
-  display: flex;
+  display: grid;
   justify-content: center;
+  column-count: auto;
+  grid-auto-flow: column;
+  grid-template-rows: 2rem 2rem;
+  grid-template-columns: 9.5rem 9.5rem;
 }
 
 .random-note-wrapper__checkboxes-element {
   display: flex;
   margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.random-note-wrapper__checkboxes-element label {
+  position: relative;
+}
+
+.info-icon {
+  width: 15px;
+  height: 15px;
+  background-size: 15px !important;
+  position: absolute;
+  right: -20px;
+  top: 3px;
+  background: url(../icons/info.png);
 }
