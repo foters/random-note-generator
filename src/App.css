@@ -16,7 +16,7 @@
   border-radius: 2rem 0.5rem;
   max-width: 336px;
   min-width: 300px;
-  padding: 2.5rem 1rem;
+  padding: 2rem 1rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -26,13 +26,16 @@
 }
 
 .switch-buttons {
-  margin-bottom: 20px;
   border: 2px solid var(--color3);
   border-radius: 0.7rem;
   display: flex;
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .switch-buttons button {
+  width: 50px;
   margin: 0;
 }
 

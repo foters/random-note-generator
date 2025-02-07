@@ -45,7 +45,6 @@ const RandomNoteComponent = (props: any) => {
 
   return (
     <div className="random-note-wrapper">
-      
       <div className="random-note-wrapper__checkboxes">
         <div className="random-note-wrapper__checkboxes-element">
           <label htmlFor='toggleDiesis'>{t('diesis')}</label>
@@ -67,7 +66,6 @@ const RandomNoteComponent = (props: any) => {
             </div>
           </div>
         </div>
-        {/* TODO: aggiungere tooltip per indicare che queste alterazioni sono riferite alla scala */}
         <div className="random-note-wrapper__checkboxes-element">
           <div className="tooltip-label">
             <label htmlFor='toggleAlteraction'>{t('alterations')}</label>

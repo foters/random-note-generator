@@ -815,14 +815,14 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className='switch-buttons'>
-        {Object.keys(lngs).map((lng) => (
-          <button key={lng} className={i18n.resolvedLanguage === lng ? 'selected' : 'unselected'} type="submit" onClick={() => i18n.changeLanguage(lng)}>
-            {t('changeCountry', {country: lngs[lng].key})}
-          </button>
-        ))}
-      </div>
       <div className="global-wrapper">
+        <div className='switch-buttons'>
+          {Object.keys(lngs).map((lng) => (
+            <button key={lng} className={i18n.resolvedLanguage === lng ? 'selected' : 'unselected'} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+              {t('changeCountry', {country: lngs[lng].key})}
+            </button>
+          ))}
+        </div>
         <HeaderComponent/>
         <main>
           <RandomNoteComponent

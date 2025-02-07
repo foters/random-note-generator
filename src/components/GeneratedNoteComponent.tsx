@@ -14,14 +14,14 @@ const GeneratedNoteComponent = (props: GeneratedNoteProps) => {
       <div className="generated-note-wrapper__circle">
         {props.note && props.note.value}
       </div>
-      <div className="generated-note-wrapper__alterations">
-        {props.showScale && props.scaleType && (
-          <p>{ alterations }</p>
-        )}
-      </div>
       <div className="generated-note-wrapper__scale-type">
         {props.showScaleType && props.scaleType && (
           <p>{t('scaleResult', {scaleName: props.scaleType.name})}</p>
+        )}
+      </div>
+      <div className="generated-note-wrapper__alterations">
+        {props.showScale && props.scaleType && (
+          <p>{ alterations }</p>
         )}
       </div>
     </div>

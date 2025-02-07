@@ -17,13 +17,18 @@
   width: 80px;
 }
 
-.generated-note-wrapper__alterations p {
-  margin: 0.5rem 0 0;
+.generated-note-wrapper__alterations {
   height: 20px;
+  margin: 0;
 }
 
+.generated-note-wrapper__alterations p,
 .generated-note-wrapper__scale-type p {
-  padding: 0.5rem 0.75rem 0;
-  font-weight: 450;
-  margin: 0;
+  margin:0;
+}
+
+.generated-note-wrapper__scale-type {
+  margin: 1rem;
+  height: 20px;
+  font-weight: 500;
 }
