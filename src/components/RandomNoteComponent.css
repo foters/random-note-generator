@@ -1,19 +1,14 @@
 .random-note-wrapper {
   width: 100%;
 }
-.random-note-wrapper__checkboxes {
-  display: grid;
-  justify-content: center;
-  column-count: auto;
-  grid-auto-flow: column;
-  grid-template-rows: 2rem 2rem;
-  grid-template-columns: 9.5rem 9.5rem;
-}
 
 .random-note-wrapper__checkboxes-element {
+  position: relative;
+  align-items: center;
   display: flex;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin: 0 0.5rem;
+  justify-content: space-between;
+  height: 35px;
 }
 .random-note-wrapper__checkboxes-element label {
   position: relative;
@@ -27,4 +22,102 @@
   right: -20px;
   top: 3px;
   background: url(../icons/info.png);
+}
+
+/* css toggle switch options */
+* {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+  outline: none;
+}
+
+.knobs,
+.layer {
+  width: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.button-cover {
+  position: relative;
+  width: 52px;
+  height: 20px;
+}
+
+.button {
+  position: absolute;
+  top: 1.3rem;
+  width: 50px;
+  height: 18px;
+  margin: -20px auto 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--color3);
+  background-color: var(--color3);
+}
+
+.button.r,
+.button.r .layer {
+  border-radius: 100px;
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knobs {
+  z-index: 2;
+}
+
+.layer {
+  width: 100%;
+  background-color: var(--color1);
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+.switch-button .knobs:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 0;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  background-color: var(--color3);
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+.switch-button .checkbox:checked+.knobs:before {
+  content: "";
+  left: 32px;
+  background-color: var(--color1);
+}
+
+.switch-button .checkbox:checked~.layer {
+  background-color: var(--color3);;
+}
+
+.switch-button .knobs,
+.switch-button .knobs:before,
+.switch-button .layer {
+  transition: 0.3s ease all;
 }

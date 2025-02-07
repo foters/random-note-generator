@@ -48,26 +48,45 @@ const RandomNoteComponent = (props: any) => {
       
       <div className="random-note-wrapper__checkboxes">
         <div className="random-note-wrapper__checkboxes-element">
-          <input type='checkbox' id="toggleDiesis" onChange={toggleDiesis}/>
-          <label htmlFor='toggleDiesis'>Diesis #</label>
+          <label htmlFor='toggleDiesis'>{t('diesis')}</label>
+          <div className="button-cover">
+            <div className="button r switch-button">
+              <input type="checkbox" className="checkbox" id="toggleDiesis" onChange={toggleDiesis} />
+              <div className="knobs"></div>
+              <div className="layer"></div>
+            </div>
+          </div>
         </div>
         <div className="random-note-wrapper__checkboxes-element">
-          <input type='checkbox' id="toggleAlteraction" onChange={toggleAlteraction} />
-          {/* TODO: aggiungere tooltip per indicare che queste alterazioni sono riferite alla scala */}
-          <label htmlFor='toggleAlteraction'>
-            {t('alterations')}
-            <span className="info-icon">
-              {/* <img src="../icons/info.png" alt="" /> */}
-            </span>
-          </label>
+          <label htmlFor='toggleBemolle'>{t('bemolle')}</label>
+          <div className="button-cover">
+            <div className="button r switch-button">
+              <input type="checkbox" className="checkbox" id="toggleBemolle" onChange={toggleBemolle} />
+              <div className="knobs"></div>
+              <div className="layer"></div>
+            </div>
+          </div>
+        </div>
+        {/* TODO: aggiungere tooltip per indicare che queste alterazioni sono riferite alla scala */}
+        <div className="random-note-wrapper__checkboxes-element">
+          <label htmlFor='toggleAlteraction'>{t('alterations')}</label>
+          <div className="button-cover">
+            <div className="button r switch-button">
+              <input type="checkbox" className="checkbox" id="toggleAlteraction" onChange={toggleAlteraction} />
+              <div className="knobs"></div>
+              <div className="layer"></div>
+            </div>
+          </div>
         </div>
         <div className="random-note-wrapper__checkboxes-element">
-          <input type='checkbox' id="toggleBemolle" onChange={toggleBemolle}/>
-          <label htmlFor='toggleBemolle'>Bemolle ♭</label>
-        </div>
-        <div className="random-note-wrapper__checkboxes-element">
-          <input type='checkbox' id="toggleScale" onChange={toggleScale}/>
-          <label htmlFor='toggleScale'>{ t('scaleType')}</label>
+          <label htmlFor='toggleScale'>{t('scaleType')}</label>
+          <div className="button-cover">
+            <div className="button r switch-button">
+              <input type="checkbox" className="checkbox" id="toggleScale" onChange={toggleScale} />
+              <div className="knobs"></div>
+              <div className="layer"></div>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -9,9 +9,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html * {
+/* html * {
   background-color:  var(--color1);
-}
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

@@ -24,17 +24,21 @@ i18n
           scaleType: 'Scale Type',
           scaleResult: 'Scale {{scaleName}}',
           changeCountry: '{{country}}',
-          getNote: 'Get the note'
+          getNote: 'Get the note',
+          diesis: 'Diesis',
+          bemolle: 'Bemolle'
         }
       },
       it: {
         translation: {
-          headerMessage: 'Scegli le optioni che preferisci e clicca sul bottone per iniziare',
+          headerMessage: 'Scegli le opzioni che preferisci e clicca sul bottone per iniziare',
           alterations: 'Alterazioni',
           scaleType: 'Tipo di scala',
           scaleResult: 'Scala {{scaleName}}',
           changeCountry: '{{country}}',
-          getNote: 'Genera la nota'
+          getNote: 'Genera la nota',
+          diesis: 'Diesis',
+          bemolle: 'Bemolle'
         }
       }
     }

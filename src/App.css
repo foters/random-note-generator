@@ -14,9 +14,15 @@
 .global-wrapper {
   border: 2px solid var(--color3);
   border-radius: 2rem 0.5rem;
-  max-width: 500px;
+  max-width: 336px;
   min-width: 300px;
   padding: 3.5rem 1rem 2.5rem;
+}
+
+@media screen and (min-width: 992px) {
+  .global-wrapper {
+    max-width: 500px;
+  }
 }
 
 .switch-buttons {
