@@ -42,5 +42,5 @@
 .switch-buttons button:not(.selected) {
   background-color: transparent;
   color: black;
-  font-weight: lighter;
+  font-weight: normal;
 }
