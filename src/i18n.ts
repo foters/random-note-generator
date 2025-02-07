@@ -20,25 +20,27 @@ i18n
       en: {
         translation: {
           headerMessage: 'Flag the options you need and click on the button below to start with',
-          alterations: 'Alterations',
+          alterations: 'Show alterations',
           scaleType: 'Scale Type',
           scaleResult: 'Scale {{scaleName}}',
           changeCountry: '{{country}}',
           getNote: 'Get the note',
           diesis: 'Diesis',
-          bemolle: 'Bemolle'
+          bemolle: 'Bemolle',
+          tooltipAlterations: 'Hide or show the generated scale alterations'
         }
       },
       it: {
         translation: {
           headerMessage: 'Scegli le opzioni che preferisci e clicca sul bottone per iniziare',
-          alterations: 'Alterazioni',
+          alterations: 'Mostra alterazioni',
           scaleType: 'Tipo di scala',
           scaleResult: 'Scala {{scaleName}}',
           changeCountry: '{{country}}',
           getNote: 'Genera la nota',
           diesis: 'Diesis',
-          bemolle: 'Bemolle'
+          bemolle: 'Bemolle',
+          tooltipAlterations: 'Mostra o nascondi le alterazioni della scala generata'
         }
       }
     }
