@@ -101,14 +101,14 @@
 
 .button-cover {
   position: relative;
-  width: 52px;
+  width: 32px;
   height: 20px;
 }
 
 .button {
   position: absolute;
   top: 1.3rem;
-  width: 50px;
+  width: 35px;
   height: 18px;
   margin: -20px auto 0 auto;
   overflow: hidden;
@@ -163,7 +163,7 @@
 
 .switch-button .checkbox:checked+.knobs:before {
   content: "";
-  left: 32px;
+  left: 17px;
   background-color: var(--color1);
 }
 
