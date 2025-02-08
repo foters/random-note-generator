@@ -27,7 +27,11 @@ i18n
           getNote: 'Get the note',
           diesis: 'Diesis',
           bemolle: 'Bemolle',
-          tooltipAlterations: 'Hide or show the generated scale alterations'
+          tooltipAlterations: 'Hide or show the generated scale alterations',
+          maggiore: 'Major',
+          minoreNaturale: 'Natural minor',
+          minoreArmonica: 'Armonic minor',
+          minoreMelodica: 'Melodic minor',
         }
       },
       it: {
@@ -40,7 +44,11 @@ i18n
           getNote: 'Genera la nota',
           diesis: 'Diesis',
           bemolle: 'Bemolle',
-          tooltipAlterations: 'Mostra o nascondi le alterazioni della scala generata'
+          tooltipAlterations: 'Mostra o nascondi le alterazioni della scala generata',
+          maggiore: 'Maggiore',
+          minoreNaturale: 'Minore naturale',
+          minoreArmonica: 'Minore armonica',
+          minoreMelodica: 'Minore melodica',
         }
       }
     }

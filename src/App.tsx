@@ -764,22 +764,22 @@ const App = () => {
   const scales: ScaleType[] = [
     {
       id: 0,
-      name: 'Maggiore',
+      name: 'maggiore',
       key: 'maggiore'
     },
     {
       id: 1,
-      name: 'Minore naturale',
+      name: 'minoreNaturale',
       key: 'minore-naturale'
     },
     {
       id: 2,
-      name: 'Minore armonica',
+      name: 'minoreArmonica',
       key: 'minore-armonica'
     },
     {
       id: 3,
-      name: 'Minore melodica',
+      name: 'minoreMelodica',
       key: 'minore-melodica'
     },
   ]

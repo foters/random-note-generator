@@ -16,7 +16,7 @@ const GeneratedNoteComponent = (props: GeneratedNoteProps) => {
       </div>
       <div className="generated-note-wrapper__scale-type">
         {props.showScaleType && props.scaleType && (
-          <p>{t('scaleResult', {scaleName: props.scaleType.name})}</p>
+          <p>{t(`${props.scaleType.name}`)}</p>
         )}
       </div>
       <div className="generated-note-wrapper__alterations">
