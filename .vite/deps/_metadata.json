@@ -2,7 +2,49 @@
   "hash": "be8d01d7",
   "configHash": "4f807bdd",
   "lockfileHash": "f6fafa67",
-  "browserHash": "5bf0716d",
-  "optimized": {},
-  "chunks": {}
+  "browserHash": "79d9d5fe",
+  "optimized": {
+    "i18next-browser-languagedetector": {
+      "src": "../../node_modules/i18next-browser-languagedetector/dist/esm/i18nextBrowserLanguageDetector.js",
+      "file": "i18next-browser-languagedetector.js",
+      "fileHash": "c62840d7",
+      "needsInterop": false
+    },
+    "i18next": {
+      "src": "../../node_modules/i18next/dist/esm/i18next.js",
+      "file": "i18next.js",
+      "fileHash": "241ed363",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "4995d8b8",
+      "needsInterop": true
+    },
+    "react-i18next": {
+      "src": "../../node_modules/react-i18next/dist/es/index.js",
+      "file": "react-i18next.js",
+      "fileHash": "cfe4cf9a",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "8c12de98",
+      "needsInterop": true
+    },
+    "web-vitals": {
+      "src": "../../node_modules/web-vitals/dist/web-vitals.js",
+      "file": "web-vitals.js",
+      "fileHash": "dc623751",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "react-BsDccEtb": {
+      "file": "react-BsDccEtb.js",
+      "isDynamicEntry": false
+    }
+  }
 }
