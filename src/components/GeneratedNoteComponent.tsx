@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './GeneratedNoteComponent.css';
 import { GeneratedNoteProps } from '../types';
 import { useTranslation } from 'react-i18next';
@@ -10,10 +10,11 @@ const GeneratedNoteComponent = (props: GeneratedNoteProps) => {
 
   return (
     <div className="generated-note-wrapper">
-
-      <div className="generated-note-wrapper__circle">
-        {props.note && props.note.value}
-      </div>
+      {!props.showNoteInterval && (
+        <div className="generated-note-wrapper__circle">
+          {props.note && props.note.value}
+        </div>
+      )}
       <div className="generated-note-wrapper__scale-type">
         {props.showScaleType && props.scaleType && (
           <p>{t(`${props.scaleType.name}`)}</p>
@@ -24,6 +25,14 @@ const GeneratedNoteComponent = (props: GeneratedNoteProps) => {
           <p>{ alterations }</p>
         )}
       </div>
+      {props.note?.value && props.noteInterval && props.showNoteInterval && (
+        <div className="generated-note-wrapper__interval">
+          <div>
+            <p>{t("noteInterval")}: {props.noteInterval}</p>
+            <p>{props.note.value + " -> "} <span className='interval-question-mark'>?</span> </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

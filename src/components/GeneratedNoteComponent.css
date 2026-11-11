@@ -17,6 +17,18 @@
   width: 80px;
 }
 
+.interval-question-mark {
+  border-bottom: 2px solid var(--color3);
+  padding: 0 0.5rem;
+}
+
+
+.generated-note-wrapper__interval {
+  padding: 0 1rem;
+  border: 2px solid var(--color3);
+  border-radius: 1rem;
+  text-align: center;
+}
 .generated-note-wrapper__alterations p,
 .generated-note-wrapper__scale-type p {
   margin: 1rem 0 0;

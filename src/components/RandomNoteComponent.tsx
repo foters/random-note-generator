@@ -42,6 +42,11 @@ const RandomNoteComponent = (props: any) => {
     const checked = e.target.checked;
     props.onToggleScaleType(checked);
   }
+  
+  const toggleInterval = (e: any) => {
+    const checked = e.target.checked;
+    props.onToggleInterval(checked);
+  }
 
   return (
     <div className="random-note-wrapper">
@@ -85,6 +90,16 @@ const RandomNoteComponent = (props: any) => {
           <div className="button-cover">
             <div className="button r switch-button">
               <input type="checkbox" className="checkbox" id="toggleScale" onChange={toggleScale} />
+              <div className="knobs"></div>
+              <div className="layer"></div>
+            </div>
+          </div>
+        </div>
+        <div className="random-note-wrapper__checkboxes-element">
+          <label htmlFor='toggleInterval'>{t('noteInterval')}</label>
+          <div className="button-cover">
+            <div className="button r switch-button">
+              <input type="checkbox" className="checkbox" id="toggleInterval" onChange={toggleInterval} />
               <div className="knobs"></div>
               <div className="layer"></div>
             </div>

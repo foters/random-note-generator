@@ -1,0 +1,140 @@
+{
+    "intervals": [
+        {
+        "id": 0,
+        "label": "2 maggiore"
+        },
+        {
+        "id": 1,
+        "label": "2 minore"
+        },
+        {
+        "id": 2,
+        "label": "2 aumentato"
+        },
+        {
+        "id": 3,
+        "label": "2 diminuito"
+        },
+        {
+        "id": 4,
+        "label": "2 più che aumentato"
+        },
+        {
+        "id": 5,
+        "label": "2 più che diminuito"
+        },
+        {
+        "id": 6,
+        "label": "3 maggiore"
+        },
+        {
+        "id": 7,
+        "label": "3 minore"
+        },
+        {
+        "id": 8,
+        "label": "3 aumentato"
+        },
+        {
+        "id": 9,
+        "label": "3 diminuito"
+        },
+        {
+        "id": 10,
+        "label": "3 più che aumentato"
+        },
+        {
+        "id": 11,
+        "label": "3 più che diminuito"
+        },
+        {
+        "id": 12,
+        "label": "4 giusto"
+        },
+        {
+        "id": 13,
+        "label": "4 aumentato"
+        },
+        {
+        "id": 14,
+        "label": "4 diminuito"
+        },
+        {
+        "id": 15,
+        "label": "4 più che aumentato"
+        },
+        {
+        "id": 16,
+        "label": "4 più che diminuito"
+        },
+        {
+        "id": 17,
+        "label": "5 giusto"
+        },
+        {
+        "id": 18,
+        "label": "5 aumentato"
+        },
+        {
+        "id": 19,
+        "label": "5 diminuito"
+        },
+        {
+        "id": 20,
+        "label": "5 più che aumentato"
+        },
+        {
+        "id": 21,
+        "label": "5 più che diminuito"
+        },
+        {
+        "id": 22,
+        "label": "6 maggiore"
+        },
+        {
+        "id": 23,
+        "label": "6 minore"
+        },
+        {
+        "id": 24,
+        "label": "6 aumentato"
+        },
+        {
+        "id": 25,
+        "label": "6 diminuito"
+        },
+        {
+        "id": 26,
+        "label": "6 più che aumentato"
+        },
+        {
+        "id": 27,
+        "label": "6 più che diminuito"
+        },
+        {
+        "id": 28,
+        "label": "7 maggiore"
+        },
+        {
+        "id": 29,
+        "label": "7 minore"
+        },
+        {
+        "id": 30,
+        "label": "7 aumentato"
+        },
+        {
+        "id": 31,
+        "label": "7 diminuito"
+        },
+        {
+        "id": 32,
+        "label": "7 più che aumentato"
+        },
+        {
+        "id": 33,
+        "label": "7 più che diminuito"
+        }
+    ]
+}

@@ -32,6 +32,7 @@ i18n
           minoreNaturale: 'Natural minor',
           minoreArmonica: 'Armonic minor',
           minoreMelodica: 'Melodic minor',
+          noteInterval: "Interval"
         }
       },
       it: {
@@ -49,6 +50,7 @@ i18n
           minoreNaturale: 'Minore naturale',
           minoreArmonica: 'Minore armonica',
           minoreMelodica: 'Minore melodica',
+          noteInterval: 'Intervallo'
         }
       }
     }

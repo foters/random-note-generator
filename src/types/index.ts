@@ -26,4 +26,6 @@ export type GeneratedNoteProps = {
   scaleType: ScaleType;
   showScale: boolean;
   showScaleType: boolean;
+  showNoteInterval?: boolean;
+  noteInterval?: string;
 }

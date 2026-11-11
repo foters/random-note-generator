@@ -7,6 +7,7 @@ import { Note, ScaleType } from './types';
 import RandomNoteComponent from './components/RandomNoteComponent';
 import './i18n';
 import { useTranslation } from 'react-i18next';
+import intervalsData from "./data/intervals.json";
 
 const lngs: any = {
   en: { nativeName: 'English', key: 'en' },
@@ -15,7 +16,8 @@ const lngs: any = {
 
 
 const App = () => {
-
+  console.log(intervalsData.intervals);
+  
   const {t, i18n} = useTranslation()
   
   const fullNotes: Note[] = [
@@ -782,21 +784,30 @@ const App = () => {
       name: 'minoreMelodica',
       key: 'minore-melodica'
     },
-  ]
+  ];
+
+  const intervals = intervalsData.intervals;
 
   const landingNote: Note = naturalNotes[Math.floor(Math.random() * 7)];
-
   const [note, setNote] = useState(landingNote);
   const [bemolleEnabled, setBemolleEnabled] = useState(false);
   const [diesisEnabled, setDiesisEnabled] = useState(false);
   const [alteractionEnabled, setAlteractionEnabled] = useState(false);
   const [scaleTypeEnabled, setScaleTypeEnabled] = useState(false);
   const [scaleType, setScaleType] = useState(scales[Math.floor(Math.random() * 4)]);
+  const [noteInterval, setNoteInterval] = useState(intervals[Math.floor(Math.random() * 4)]);
+  const [showNoteInterval, setShowNoteInterval] = useState(false);
 
   const toggleBemolleHandler = (e: any) => setBemolleEnabled(e);
   const toggleDiesisHandler = (e: any) => setDiesisEnabled(e);
   const toggleAlteractionHandler = (e: any) => setAlteractionEnabled(e);
   const toggleScaleTypeHandler = (e: any) => setScaleTypeEnabled(e);
+
+  const getRandomNumber = (arr: any[], num: number) => {
+    const buf = new Uint32Array(1);
+    crypto.getRandomValues(buf);
+    return arr[buf[0] % num];
+  }
 
   const generatedNoteHandler = (note:any , scaleIndex: any) => {
     let newNotes = [...naturalNotes];
@@ -811,7 +822,14 @@ const App = () => {
     }
     setScaleType(scales[scaleIndex])
     setNote(newNotes[note]);
+    const buf = new Uint32Array(1);
+    crypto.getRandomValues(buf);
+    setNoteInterval(getRandomNumber(intervals, 34));
   };
+
+  const toggleIntervalHandler = (e: boolean) => {
+    setShowNoteInterval(e);
+  }
 
   return (
     <div className="App">
@@ -833,8 +851,9 @@ const App = () => {
             onToggleAlteraction={toggleAlteractionHandler}
             onToggleDiesis={toggleDiesisHandler}
             onToggleBemolle={toggleBemolleHandler}
+            onToggleInterval={toggleIntervalHandler}
           />
-          <GeneratedNoteComponent note={note} showScale={alteractionEnabled} showScaleType={scaleTypeEnabled} scaleType={scaleType} />
+          <GeneratedNoteComponent noteInterval={noteInterval.label} showNoteInterval={showNoteInterval} note={note} showScale={alteractionEnabled} showScaleType={scaleTypeEnabled} scaleType={scaleType} />
         </main>
       </div>
     </div>
